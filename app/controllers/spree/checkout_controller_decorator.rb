@@ -20,4 +20,4 @@ module SpreeReffiliate
   end
 end
 
-::Spree::CheckoutController.prepend SpreeReffiliate::Spree::CheckoutControllerDecorator
+Spree::CheckoutController.prepend SpreeReffiliate::Spree::CheckoutControllerDecorator
