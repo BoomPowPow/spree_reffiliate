@@ -1,6 +1,6 @@
 module Spree
   module AppConfigurationDecorator
-    def self.prepended(base)
+    def self.included(base)
       base.preference :admin_affiliates_per_page, :integer, default: 10
       base.preference :admin_commissions_per_page, :integer, default: 10
       base.preference :admin_transactions_per_page, :integer, default: 10
