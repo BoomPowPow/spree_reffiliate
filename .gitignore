@@ -5,6 +5,7 @@
 .idea
 .project
 .sass-cache
+.vscode
 coverage
 Gemfile.lock
 tmp
