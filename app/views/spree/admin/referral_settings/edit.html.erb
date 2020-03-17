@@ -18,7 +18,9 @@
 
       <div class="checkbox">
         <%= label_tag :referrer_benefit_enabled do %>
-          <%= preference_field_tag :referrer_benefit_enabled, Spree::Config[:referrer_benefit_enabled], type: :boolean %>
+          # TODO: To change when the configuration problems is fixed
+          <%= preference_field_tag :referrer_benefit_enabled, 0, type: :boolean %>
+          <#%= preference_field_tag :referrer_benefit_enabled, Spree::Config[:referrer_benefit_enabled], type: :boolean %>
           <%= Spree.t(:referral_credit_status, scope: :referral_settings) %>
         <% end %>
       </div>

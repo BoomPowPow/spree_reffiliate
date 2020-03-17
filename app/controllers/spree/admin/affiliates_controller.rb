@@ -7,7 +7,7 @@ module Spree
 
       def index
         # TODO: To change when the configuration problems is fixed
-        @affiliates = Affiliate.all.page(params[:page]).per(params[:per_page] || 10
+        @affiliates = Affiliate.all.page(params[:page]).per(params[:per_page] || 10)
         # @affiliates = Affiliate.all.page(params[:page]).per(params[:per_page] || Spree::Config[:admin_affiliates_per_page])
       end
 
@@ -16,7 +16,7 @@ module Spree
         @commission_transactions = @affiliate.transactions
         @search = @commission_transactions.ransack(params[:q])
         # TODO: To change when the configuration problems is fixed
-        @commission_transactions = @search.result.page(params[:page]).per(params[:per_page] || 10
+        @commission_transactions = @search.result.page(params[:page]).per(params[:per_page] || 10)
         # @commission_transactions = @search.result.page(params[:page]).per(params[:per_page] || Spree::Config[:admin_transactions_per_page])
       end
 
