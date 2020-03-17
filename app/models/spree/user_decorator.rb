@@ -87,7 +87,9 @@ module Spree
     end
 
     def referral_amount(referrer)
-      referrer.referral_credits || Spree::Config[:referral_credits]
+      # TODO: To change when the configuration problems is fixed
+      referrer.referral_credits || 0
+      # referrer.referral_credits || Spree::Config[:referral_credits]
     end
 
     def referrer_eligible?(user)

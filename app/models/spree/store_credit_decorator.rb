@@ -1,5 +1,5 @@
 module Spree
-  StoreCredit::REFERRAL_STORE_CREDIT_CATEGORY = 'Referral Credit'
+  StoreCredit::REFERRAL_STORE_CREDIT_CATEGORY ||= 'Referral Credit'
   module StoreCreditDecorator
     def self.prepended(base)
       base.has_one :referred_record

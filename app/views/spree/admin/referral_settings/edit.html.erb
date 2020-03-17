@@ -11,7 +11,9 @@
     <div class="col-md-4" data-hook="referral_settings">
       <div class="form-group field">
         <%= label_tag 'referral_credits', Spree.t(:credits_to_be_awarded, scope: :referral_settings) %>
-          <%= preference_field_tag :referral_credits, Spree::Config[:referral_credits], type: :text_field, class: 'form-control' %>
+        // # TODO: To change when the configuration problems is fixed
+        <%= preference_field_tag :referral_credits, 0, type: :text_field, class: 'form-control' %>
+          <#%= preference_field_tag :referral_credits, Spree::Config[:referral_credits], type: :text_field, class: 'form-control' %>
       </div>
 
       <div class="checkbox">
