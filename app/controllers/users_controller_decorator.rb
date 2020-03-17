@@ -31,7 +31,7 @@ module Spree
     def load_referred_records
       @referred_records = spree_current_user.referral.referred_records.order({ created_at: :desc }).
       # TODO: To change when the configuration problems is fixed
-                            page(params[:page]).per(params[:per_page] || 10
+                            page(params[:page]).per(params[:per_page] || 10)
                             # page(params[:page]).per(params[:per_page] || Spree::Config[:referred_records_per_page])
     end 
   end
