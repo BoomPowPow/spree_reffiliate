@@ -20,7 +20,7 @@ module Spree
           @collection = super
           @search = @collection.ransack(params[:q])
           # TODO: To change when the configuration problems is fixed
-          @collection = @search.result.includes(:affiliate, :transactions).page(params[:page]).per(params[:per_page] || 10
+          @collection = @search.result.includes(:affiliate, :transactions).page(params[:page]).per(params[:per_page] || 10)
           # @collection = @search.result.includes(:affiliate, :transactions).page(params[:page]).per(params[:per_page] || Spree::Config[:admin_commissions_per_page])
         end
 
