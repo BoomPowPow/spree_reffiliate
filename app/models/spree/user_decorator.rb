@@ -43,7 +43,8 @@ module Spree
   
     protected
     def password_required?
-      if new_record? && spree_roles.include?(Spree::Role.affiliate)
+      # if new_record? && spree_roles.include?(Spree::Role.affiliate)
+      if new_record? && spree_roles.include?(Spree::Role.find_or_create_by(name: 'affiliate'))
         false
       else
         super
