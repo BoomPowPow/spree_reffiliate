@@ -1,6 +1,6 @@
 module Spree
   module RoleDecorator
-    define_method :affiliate do
+    def affiliate
       find_or_create_by(name: :affiliate)
     end
   end
